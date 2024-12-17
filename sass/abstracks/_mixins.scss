@@ -1,0 +1,82 @@
+@import "../abstracks/variables";
+
+@mixin btn {
+    display: inline-block;
+    background: $btn-bg;
+    color: white;
+    padding: 15px 18px;
+    font-weight: $title-weigth;
+    border-radius: 25px;
+}
+
+@mixin number {
+    background-color: $number-bg;
+    width: 24px;
+    height: 24px;
+    padding: 4.5px 8.4px;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #fff;
+    font-weight: $title-weigth;
+    margin-right: 18.4px;
+}
+
+
+.loading i{
+font-size: 38px;
+color: $number-bg;
+position: absolute;
+top: 50%;
+left: 50%;
+animation: load 1s cubic-bezier(0.05, 0.82, 0.08, 1);
+transform: scale(0);
+}
+
+
+@keyframes load{
+0%{
+    transform: rotate(0turn);
+}
+100%{
+    transform: rotate(4turn);
+}
+}
+
+@keyframes affichage {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes main-affichage {
+    0% {
+        transform: translateY(-110%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes cards-animation {
+    0%{
+      transform: translateY(-400% ) scaleY(0.7);
+    }
+  
+    100%{
+    transform: translate(1);
+    }
+  }
+/*
+@keyframes menu-page{
+0%{
+    transform: translateY(-10%) scale(1, 0);
+}
+100%{
+    transform: translateY(0) scale(1, 1);
+}
+}*/

@@ -1,0 +1,27 @@
+@import "../abstracks/variables";
+
+.navbar {
+    padding: 15.5px 0;
+    text-align: center;
+    background-color: $navbar-bg;
+    color: black;
+    box-shadow: 0 4px $block-shadow-color;
+    margin-bottom: 4px;
+
+    @media screen and ($tablette) {
+        box-shadow: none;
+        margin-bottom: 0;
+    }
+
+    &__link {
+        font-family: $text-police;
+        color: inherit;
+        font-weight: $title-weigth;
+        line-height: 18.87px;
+
+        i {
+            margin-right: 17px;
+        }
+    }
+
+}

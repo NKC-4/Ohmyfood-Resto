@@ -1,0 +1,186 @@
+@import "../abstracks/variables", "../abstracks/mixins",
+"../abstracks/functions";
+
+.organisation {
+    &__list {
+        .link {
+            color: $text-color;
+            font-weight: $title-weigth;
+            background: $blocks-bg;
+            opacity: 0.8;
+            padding: 28px 0;
+            margin-bottom: 24px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 15px 4px $block-shadow-color;
+            margin-left: 12.51px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .number {
+                @include number;
+                margin-left: -12.51px;
+
+                @media screen and ($dekstop) {}
+            }
+
+            @media screen and ($tablette) {
+                width: 335px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.options {
+    &__list {
+        .option {
+            background-color: #fff;
+            border-radius: 15px;
+            padding-bottom: 12px;
+            margin-bottom: 18px;
+            overflow-x: hidden;
+            box-shadow: 0 0 4px 4px $option-shadow-color;
+            position: relative;
+            &__img {
+                position: relative;
+                margin-bottom: 16px;
+
+                .new {
+                    padding: 7px 9px;
+                    background-color: rgb(189, 233, 222);
+                    color: hsla(165, 100%, 26%, 1);
+                    font-weight: $title-weigth;
+                    width: 80px;
+                    height: 29px;
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+
+                }
+            }
+
+            @media screen and ($tablette) {
+                margin-bottom: 0;
+            }
+
+            @media screen and ($dekstop) {
+                margin-bottom: 0;
+                width: 490px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.hero__section {
+    @extend .section;
+    padding: 32px 13px 40px 13px;
+    border-radius: 25px 25px 0 0;
+    max-width: 1055px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and ($tablette){
+        margin-top: -51px;
+        padding: 51px 180px 40px 180px;
+    }
+
+    @media screen and ($dekstop) {
+        padding: 51px 200px 40px 200px;
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 21px;
+        font-size: $second-title-size;
+        margin-bottom: 26px;
+        @media screen and ($title-break) {
+            width: 307px;
+            text-wrap: nowrap;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        i {
+            color: hsla(0, 0%, 6%, 1);
+        }
+
+        i {
+            transition: all 0.6s;
+
+            &:hover {
+                font-weight: 900;
+                background: $btn-bg;
+                background-clip: text;
+                color: transparent;
+            }
+        }
+
+        .title {
+            @extend .about-fisrt-title;
+        }
+    }
+
+    &__body {
+        margin-bottom: 40px;
+        .title {
+            font-size: $text-size;
+            text-transform: uppercase;
+            font-weight: $text-weigth;
+            line-height: 18.75px;
+            margin-bottom: 12px;
+
+            &::after {
+                content: '';
+                border: 3px solid $new-bg-color;
+                display: block;
+                width: 40px;
+                margin-top: 3px
+            }
+        }
+
+        .contents {
+            animation: cards-animation 3s cubic-bezier(0.5, 0.7, 1, 1);
+            @extend .content-block;
+            overflow: hidden;
+            position: relative;
+            &__title {
+                font-size: $title-size;
+                font-weight: $title-weigth;
+                line-height: 21.09px;
+                margin-bottom: 5px;
+            }
+
+            &__desc {
+                display: flex;
+                justify-content: space-between;
+                font-size: 15px;
+                font-weight: $text-weigth;
+                .price {
+                    font-weight: $first-title-weigth;
+                    line-height: 17.63px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and ($iphone-xr) {
+    .contents {
+        &:hover  .contents__desc .price{
+            transform: translateX(-55px);
+        }
+
+        &__desc {
+            .price {
+                transform: translateX(0);
+                transition: transform 1s;
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+@import "layout/header", "layout/navigation", "layout/bocks", "layout/footer";
+
+@import "abstracks/variables",
+"abstracks/functions";
+
+@import "base/typography";
+
+@import "pages/home";
+
+@import "components/buttons",
+"components/incons";
+
+body {
+  font-family: $text-police;
+  font-weight: $text-weigth;
+  font-size: $text-size;
+  line-height: 18.75px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main{
+  animation: main-affichage  3s cubic-bezier(0.8, 0.8, 0.9, 1);
+}
+
+.about__hero {
+  background: url(../images/about__bg.png);
+  padding-top: 250px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media screen and (max-width: 360px) {
+    padding-top: 180px;
+  }
+
+  @media screen and (min-width: 500px) {
+    padding-top: 330px;
+  }
+
+  @media screen and ($tablette) {
+    background: url(../images/about__bg_desk.png);
+    padding-top: 380px;
+    background-repeat: no-repeat;
+  }
+}
+
+.delice__hero {
+  background: url(../images/delice__bg.png);
+  background-repeat: no-repeat;
+  padding-top: 200px;
+  background-size: 100% 250px;
+  @media screen and ($tablette){
+    padding-top: 380px;
+    background-repeat: no-repeat;
+    background-size: 100% 25%;
+}
+}
+
+.note__hero {
+  background: url(../images/note__bg.png);
+  background-repeat: no-repeat;
+  padding-top: 200px;
+  background-size: 100% 250px;
+  @media screen and ($tablette){
+    padding-top: 380px;
+    background-repeat: no-repeat;
+    background-size: 100% 25%;
+}
+}
+
+.france__hero{
+  background: url(../images/france__bg.png);
+  background-repeat: no-repeat;
+  padding-top: 200px;
+  background-size: 100% 250px;
+  @media screen and ($tablette){
+    padding-top: 380px;
+    background-repeat: no-repeat;
+    background-size: 100% 25%;
+}
+}

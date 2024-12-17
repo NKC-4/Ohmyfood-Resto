@@ -1,0 +1,21 @@
+@import "../abstracks/variables",
+"../abstracks/mixins",
+"../abstracks//functions";
+
+.btn {
+    @include btn;
+
+    &__link {
+        color: inherit;
+    }
+}
+
+.about__hero {
+    .btn {
+        width: 186px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+

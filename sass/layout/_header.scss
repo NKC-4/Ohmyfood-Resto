@@ -1,0 +1,50 @@
+@import "../abstracks/variables";
+
+.header {
+    animation: affichage 3s cubic-bezier(0.002, 0.003, 0.003, 0.1);
+    &__logo {
+        display: flex;
+        justify-content: center;
+        padding: 14px 0;
+       box-shadow: 0 4px $block-shadow-color;
+        margin-bottom: 4px;
+        @media screen and ($tablette) {
+            box-shadow: none;
+            margin-bottom: 0;
+        }
+
+        .logo {
+            display: block;
+        }
+    }
+}
+
+.header--return{
+    .header__logo {
+        display: block;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .navbar{
+        background: transparent;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        margin-right: 0;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        justify-content: center;
+        i{
+            margin: 0;
+            font-size: $title-size;
+        }
+    }
+
+    display: flex;
+    padding: 17px;
+    align-items: center;
+}

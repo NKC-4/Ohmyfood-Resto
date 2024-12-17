@@ -1,0 +1,65 @@
+@import "../abstracks/variables";
+
+.footer {
+    background: $footer-bg;
+    padding: 25px;
+    color: white;
+    animation: affichage 3s cubic-bezier(0.8, 0.8, 0.9, 1);
+    @media screen and ($dekstop) {
+        display: flex;
+        justify-content: end;
+        flex-direction: row-reverse;
+        padding: 57px 35px 20px 0;
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: 16px;
+
+        img {
+            display: block;
+        }
+
+    }
+
+    &__links {
+        @media screen and ($tablette) {
+            display: flex;
+            justify-content: space-between;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .link {
+            @media screen and ($tablette) {
+                display: flex;
+                align-items: center;
+                padding-right: 25px;
+                margin-bottom: 0;
+            }
+
+            margin-bottom: 7px;
+            font-weight: $title-weigth;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .link--font {
+            font-weight: $text-weigth;
+
+            @media screen and ($dekstop) {
+                min-width: 130px;
+            }
+
+            @media screen and ($tablette) {
+                padding-right: 25px;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}

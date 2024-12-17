@@ -1,0 +1,89 @@
+@import "../abstracks/variables";
+
+.link {
+    a {
+        position: relative;
+        font-size: 18px;
+    }
+
+    .fa-store {
+        color: $number-bg;
+    }
+
+    i {
+        margin-right: 11px;
+        color: inherit;
+
+        &:hover {
+            color: $number-bg;
+        }
+    }
+}
+
+.option__title {
+    .fa-heart{
+        transition: all 1s;
+        &:hover{
+            background: $btn-bg;
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+        }
+    }
+}
+
+.validator {
+    width: 59px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $new-bg-color;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+     i{
+        color: #fff;
+    }
+    transform: translateX(80px);
+}
+
+    @media screen and ($iphone-xr) {
+
+        .contents{
+            &:hover .validator{
+            
+             transform: translateX(0px);
+             transition:   transform 1s;
+            }
+        }
+        
+        .contents{
+            &:hover .validator i{
+            transform: rotate(1turn);
+            transition:   transform 1s;
+            }
+        }
+    }
+
+.footer__links {
+    .link {
+        a {
+            transition: all 6ms;
+            &:hover {
+                color: $number-bg;
+                text-decoration: underline;
+                transform: scale(1.02);
+            }
+
+            .fa-utensils {
+                font-size: 24px;
+
+                @media screen and ($tablette) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

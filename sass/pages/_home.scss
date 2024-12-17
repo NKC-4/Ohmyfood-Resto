@@ -1,0 +1,164 @@
+@import "../abstracks/variables", "../abstracks/mixins",
+"../abstracks/functions";
+
+.hero {
+    padding: 39px 0 57px 0;
+    @extend .section;
+
+    @media screen and (min-width: 387px) {
+        padding: 39px 20px 57px 20px;
+    }
+
+    &__title {
+        font-size: $first-title-size;
+        font-size: $first-title-weigth;
+        line-height: 28.13px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    &__body {
+        text-align: center;
+
+        .desc {
+            margin-bottom: 27px;
+            font-size: $title-size;
+            line-height: 21px;
+        }
+    }
+}
+
+.organisation {
+    padding: 48px 20px;
+
+    @media screen and ($dekstop) {
+        padding: 48px 180px;
+    }
+
+    .title {
+        font-size: $first-title-size;
+        font-weight: $first-title-weigth;
+        margin-bottom: 26px;
+    }
+
+    &__list {
+        @media screen and ($tablette) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        @media screen and ($dekstop) {
+            flex-wrap: nowrap;
+        }
+
+        .link {
+            color: $text-color;
+            font-weight: $title-weigth;
+            background: $blocks-bg;
+            opacity: 0.8;
+            padding: 28px 0;
+            margin-bottom: 24px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 15px 4px $block-shadow-color;
+            margin-left: 12.51px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .number {
+                @include number;
+                margin-left: -12.51px;
+
+                @media screen and ($dekstop) {}
+            }
+
+            @media screen and ($tablette) {
+                width: 335px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.options {
+    @extend .section;
+    padding: 48px 20px 68px 20px;
+
+    @media screen and ($dekstop) {
+        padding: 48px 180px 68px 180px;
+    }
+
+    &__title {
+        @extend .fisrt-title;
+    }
+
+    &__list {
+        @media screen and ($tablette) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        @media screen and ($dekstop) {
+            gap: 50px;
+        }
+
+        .option {
+            background-color: #fff;
+            border-radius: 15px;
+            padding-bottom: 12px;
+            margin-bottom: 18px;
+            overflow-x: hidden;
+            box-shadow: 0 0 4px 4px $option-shadow-color;
+            @media screen and ($tablette) {
+                margin-bottom: 0;
+            }
+
+            @media screen and ($dekstop) {
+                margin-bottom: 0;
+                width: 490px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &--img {
+                width: 100%;
+                display: block;
+                /*border-radius: 15px 15px 0 0;*/
+            }
+
+            &__title {
+                display: flex;
+                justify-content: space-between;
+                font-size: $title-size;
+                font-weight: $first-title-weigth;
+                padding: 0 33px 0 13px;
+                margin-bottom: 5px;
+                line-height: 21.09px;
+                .title{
+                    transition: transform  6ms;
+                    &:hover{
+                        text-decoration: underline;
+                        transform: scale(1.02);
+                    }
+                }
+            }
+
+            .desc {
+                margin-left: 15px;
+                font-size: 17px;
+                line-height: 19.92px;
+                transition: transform 6ms;
+                &:hover{
+                    text-decoration: underline;
+                    transform: scale(1.02);
+                }
+            }
+        }
+    }
+}

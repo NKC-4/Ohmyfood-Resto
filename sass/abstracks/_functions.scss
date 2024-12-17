@@ -1,0 +1,54 @@
+@import "../abstracks/variables";
+
+.section {
+    background-color: $blocks-bg;
+    display: flex;
+    flex-direction: column;
+}
+
+.fisrt-title {
+    font-size: $first-title-size;
+    font-weight: $first-title-weigth;
+    margin-bottom: 26px;
+    line-height: 28.13px;
+}
+
+.about-fisrt-title {
+    font-size: $second-title-size;
+    font-weight: $first-title-weigth;
+    font-family: $title-police;
+    line-height: 40.82px;
+    font-style: italic;
+}
+
+.btn {
+    transition: background-color 6ms;
+
+    &:hover {
+        background: darken($btn-hover-bg, 15%);
+    }
+}
+
+.content-block {
+    color: $text-color;
+    font-weight: $title-weigth;
+    background: #fff;
+    font-size: $title-size;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 15.04px;
+    box-shadow: 0px 0px 15px 4px $block-shadow-color;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.page__bg{
+    padding-top: 200px;
+    background-size: 100% 250px;
+    @media screen and ($tablette){
+      padding-top: 380px;
+      background-repeat: no-repeat;
+      background-size: 100% 25%;
+  }
+}
