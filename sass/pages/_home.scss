@@ -92,6 +92,12 @@
 
     &__title {
         @extend .fisrt-title;
+        @media screen and ($option-list-break) {
+            text-align: center;
+        }
+        @media screen and (min-width: 1108px) {
+            text-align: left;
+    }
     }
 
     &__list {
@@ -100,8 +106,13 @@
             flex-wrap: wrap;
             justify-content: space-between;
             gap: 24px;
+            @media screen and ($option-list-break) {
+                justify-content: center;
+            }
+            @media screen and (min-width: 1108px) {
+                justify-content: space-between;
         }
-
+    }
         @media screen and ($dekstop) {
             gap: 50px;
         }

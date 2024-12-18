@@ -788,12 +788,32 @@ li {
     padding: 48px 180px 68px 180px;
   }
 }
+@media screen and (min-width: 820px) {
+  .options__title {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1108px) {
+  .options__title {
+    text-align: left;
+  }
+}
 @media screen and (min-width: 768px) {
   .options__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 24px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 820px) {
+  .options__list {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1108px) {
+  .options__list {
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 1440px) {
