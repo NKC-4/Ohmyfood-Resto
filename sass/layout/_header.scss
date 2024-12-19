@@ -6,13 +6,6 @@
         display: flex;
         justify-content: center;
         padding: 14px 0;
-       box-shadow: 0 4px $block-shadow-color;
-        margin-bottom: 4px;
-        @media screen and ($tablette) {
-            box-shadow: none;
-            margin-bottom: 0;
-        }
-
         .logo {
             display: block;
         }

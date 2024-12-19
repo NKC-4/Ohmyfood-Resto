@@ -1,6 +1,5 @@
 @import "../abstracks/variables",
-"../abstracks/mixins",
-"../abstracks//functions";
+"../abstracks/mixins";
 
 .btn {
     @include btn;

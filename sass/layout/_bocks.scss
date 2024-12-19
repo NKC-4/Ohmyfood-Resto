@@ -1,5 +1,5 @@
 @import "../abstracks/variables", "../abstracks/mixins",
-"../abstracks/functions";
+"../abstracks/extends";
 
 .organisation {
     &__list {
@@ -21,8 +21,6 @@
             .number {
                 @include number;
                 margin-left: -12.51px;
-
-                @media screen and ($dekstop) {}
             }
 
             @media screen and ($tablette) {
@@ -57,7 +55,6 @@
                     position: absolute;
                     top: 15px;
                     right: 15px;
-
                 }
             }
 
@@ -145,8 +142,8 @@
         }
 
         .contents {
-            animation: cards-animation 3s cubic-bezier(0.5, 0.7, 1, 1);
-            @extend .content-block;
+           /* animation: cards-animation 3s cubic-bezier(0.5, 0.7, 1, 1);
+            */@extend .content-block;
             overflow: hidden;
             position: relative;
             &__title {

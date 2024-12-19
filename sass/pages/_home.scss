@@ -1,5 +1,5 @@
 @import "../abstracks/variables", "../abstracks/mixins",
-"../abstracks/functions";
+"../abstracks/extends";
 
 .hero {
     padding: 39px 0 57px 0;
@@ -92,10 +92,10 @@
 
     &__title {
         @extend .fisrt-title;
-        @media screen and ($option-list-break) {
+        @media screen and ($ipad-air) {
             text-align: center;
         }
-        @media screen and (min-width: 1108px) {
+        @media screen and (min-width: 1125px) {
             text-align: left;
     }
     }
@@ -106,11 +106,12 @@
             flex-wrap: wrap;
             justify-content: space-between;
             gap: 24px;
-            @media screen and ($option-list-break) {
+            @media screen and ($ipad-air) {
                 justify-content: center;
             }
-            @media screen and (min-width: 1108px) {
+            @media screen and (min-width: 1125px) {
                 justify-content: space-between;
+                column-gap: 0;
         }
     }
         @media screen and ($dekstop) {

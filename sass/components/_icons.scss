@@ -67,6 +67,16 @@
         }
     }
 
+    .loading i{
+        font-size: 38px;
+        color: $number-bg;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        animation: load 1s cubic-bezier(0.05, 0.82, 0.08, 1);
+        transform: scale(0);
+        }
+
 .footer__links {
     .link {
         a {
