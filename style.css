@@ -52,7 +52,7 @@ li {
 /*hover color*/
 /*break points*/
 .header {
-  animation: affichage 3s cubic-bezier(0.002, 0.003, 0.003, 0.1);
+  animation: affichage 2s cubic-bezier(0.002, 0.003, 0.003, 0.1);
 }
 .header__logo {
   display: flex;
@@ -896,7 +896,7 @@ body {
 }
 
 .main {
-  animation: main-affichage 3s cubic-bezier(0.8, 0.8, 0.9, 1);
+  animation: main-affichage 2s cubic-bezier(0.8, 0.8, 0.9, 1);
 }
 
 .about__hero {
@@ -988,13 +988,10 @@ body {
 @keyframes main-affichage {
   0% {
     background: #f5f2f2;
-    opacity: 0.000001;
+    opacity: 0.001;
   }
   50% {
     opacity: 0.05;
-  }
-  80% {
-    opacity: 0.5;
   }
   100% {
     opacity: 1;

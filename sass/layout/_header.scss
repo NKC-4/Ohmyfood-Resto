@@ -1,7 +1,7 @@
 @import "../abstracks/variables";
 
 .header {
-    animation: affichage 3s cubic-bezier(0.002, 0.003, 0.003, 0.1);
+    animation: affichage 2s cubic-bezier(0.002, 0.003, 0.003, 0.1);
     &__logo {
         display: flex;
         justify-content: center;
