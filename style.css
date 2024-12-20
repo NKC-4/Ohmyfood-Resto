@@ -900,7 +900,7 @@ body {
 }
 
 .about__hero {
-  background: url(../images/about__bg.png);
+  background: url(./images/about__bg.png);
   padding-top: 250px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -917,14 +917,14 @@ body {
 }
 @media screen and (min-width: 768px) {
   .about__hero {
-    background: url(../images/about__bg_desk.png);
+    background: url(./images/about__bg_desk.png);
     padding-top: 380px;
     background-repeat: no-repeat;
   }
 }
 
 .delice__hero {
-  background: url(../images/delice__bg.png);
+  background: url(./images/delice__bg.png);
   background-repeat: no-repeat;
   padding-top: 200px;
   background-size: 100% 250px;
@@ -938,7 +938,7 @@ body {
 }
 
 .note__hero {
-  background: url(../images/note__bg.png);
+  background: url(./images/note__bg.png);
   background-repeat: no-repeat;
   padding-top: 200px;
   background-size: 100% 250px;
@@ -952,7 +952,7 @@ body {
 }
 
 .france__hero {
-  background: url(../images/france__bg.png);
+  background: url(./images/france__bg.png);
   background-repeat: no-repeat;
   padding-top: 200px;
   background-size: 100% 250px;
