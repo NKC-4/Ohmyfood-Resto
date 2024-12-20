@@ -121,11 +121,20 @@ body {
   
   @keyframes main-affichage {
       0% {
-          transform: translateY(-110%);
+          
+          background: #f5f2f2;
+          opacity: 0.000001;
       }
   
+      50% {
+        opacity: 0.05;
+      }
+
+      80% {
+        opacity: 0.5;
+      }
       100% {
-          transform: translateY(0);
+        opacity: 1;
       }
   }
   
